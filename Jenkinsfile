@@ -25,12 +25,10 @@ pipeline {
                 SONAR_TOKEN = credentials('sonarqube-token')
             }
             steps {
-                sh '''./gradlew sonarqube \
+                sh ./gradlew sonarqube \
  			-Dsonar.projectKey=D0649592-swimming-pool \
   			-Dsonar.host.url=http://140.134.26.54:10990 \
   			-Dsonar.login=6b859e7fe28b71f11c70a006c60b08c5057f3b54
-                '''
-
             }
         }
     }
